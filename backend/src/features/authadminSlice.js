@@ -8,7 +8,7 @@ const initialState = {
   token: '',
 };
 
-const apiLink = 'http://localhost:8080/authadmin';
+const apiLink = 'https://nouman-cart.onrender.com/authadmin';
 
 // Async thunk: Login
 export const loginUser = createAsyncThunk(

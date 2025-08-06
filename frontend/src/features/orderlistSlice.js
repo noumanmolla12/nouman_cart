@@ -6,7 +6,7 @@ export const fetchOrdersByUserId = createAsyncThunk(
   'orderlist/fetchOrdersByUserId',
   async (userId, thunkAPI) => {
     try {
-      const res = await axios.get(`http://localhost:8080/orderlist/user/${userId}`);
+      const res = await axios.get(`https://nouman-cart.onrender.com/orderlist/user/${userId}`);
       console.log("✅ API Response:", res.data); // ⬅️ Should log your array
       return res.data;
     } catch (error) {

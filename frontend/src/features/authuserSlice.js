@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const apiLink = 'http://localhost:8080/authuser';
+const apiLink = 'https://nouman-cart.onrender.com/authuser';
 
 // Initial State
 const initialState = {

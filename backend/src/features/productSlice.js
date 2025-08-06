@@ -8,13 +8,13 @@ import axios from 'axios';
 // Async thunk to fetch all products
 
 export const fetchAllProducts = createAsyncThunk('products/fetchAllProducts', async () => {
-  const response = await axios.get('http://localhost:8080/admin-product/all');
+  const response = await axios.get('https://nouman-cart.onrender.com/admin-product/all');
   return response.data;
 });
 
 // Async thunk to fetch a product by ID
 export const fetchSingleProduct = createAsyncThunk('products/fetchSingleProduct', async (productId) => {
-  const response = await axios.get(`http://localhost:8080/admin-product/${productId}`);
+  const response = await axios.get(`https://nouman-cart.onrender.com/admin-product/${productId}`);
  console.log('response',response)
   return response.data;
 });
@@ -22,7 +22,7 @@ export const fetchSingleProduct = createAsyncThunk('products/fetchSingleProduct'
 
 // Async thunk to handle adding a product
 export const addProduct = createAsyncThunk('products/addProduct', async (productData) => {
-  const response = await axios.post('http://localhost:8080/admin-product/add-product', productData);
+  const response = await axios.post('https://nouman-cart.onrender.com/admin-product/add-product', productData);
   return response.data;
 });
 
@@ -30,7 +30,7 @@ export const addProduct = createAsyncThunk('products/addProduct', async (product
 
 // Async thunk to handle updating a product
 export const updateProduct = createAsyncThunk('products/updateProduct', async ({ productId, formData }) => {
-  const response = await axios.put(`http://localhost:8080/admin-product/update/${productId}`, formData);
+  const response = await axios.put(`https://nouman-cart.onrender.com/admin-product/update/${productId}`, formData);
   return response.data;
 });
 
@@ -40,7 +40,7 @@ export const updateProduct = createAsyncThunk('products/updateProduct', async ({
 
 // Async thunk to handle deleting a product
 export const deleteProduct = createAsyncThunk('products/deleteProduct', async (productId) => {
-  await axios.delete(`http://localhost:8080/admin-product/delete/${productId}`);
+  await axios.delete(`https://nouman-cart.onrender.com/admin-product/delete/${productId}`);
   return productId;
 });
 

@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const api = 'http://localhost:8080/admin';
+//const api = 'http://localhost:8080/admin';
+const api = 'https://nouman-cart.onrender.com/admin';
 
 // GET - Fetch all admins
 export const fetchAdmins = createAsyncThunk('admin/fetchAll', async () => {

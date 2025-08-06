@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  imagePath: 'http://localhost:8080/uploads/',
+  imagePath: 'https://nouman-cart.onrender.com/uploads/',
   frontPath: '',
   adminPath: ''
 };

@@ -5,7 +5,7 @@ import axios from 'axios';
 export const fetchBlogs = createAsyncThunk(
   'blog/fetchBlogs',
   async () => {
-    const response = await axios.get('http://localhost:8080/admin-blog/all');
+    const response = await axios.get('https://nouman-cart.onrender.com/admin-blog/all');
     return response.data;
   }
 );
@@ -14,7 +14,7 @@ export const fetchBlogs = createAsyncThunk(
 export const fetchSingleBlog = createAsyncThunk(
   'blogs/fetchSingleBlog',
   async (blogId) => {
-    const response = await axios.get(`http://localhost:8080/admin-blog/${blogId}`);
+    const response = await axios.get(`https://nouman-cart.onrender.com/admin-blog/${blogId}`);
   
     console.log('BBBBB',response);
 

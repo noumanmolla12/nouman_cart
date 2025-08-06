@@ -19,7 +19,7 @@ export const submitFormData = createAsyncThunk(
 
     try {
       // Make a POST request to the backend API endpoint for checkout
-      const response = await axios.post('http://localhost:8080/customers/checkout', formData, {
+      const response = await axios.post('https://nouman-cart.onrender.com/customers/checkout', formData, {
         headers: {
           'Content-Type': 'application/json'
         }

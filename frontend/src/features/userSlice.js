@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const api = 'http://localhost:8080/user';
+const api = 'https://nouman-cart.onrender.com/user';
 
 // GET all users
 export const fetchUsers = createAsyncThunk('user/fetchUsers', async () => {

@@ -5,13 +5,13 @@ import axios from 'axios';
 
 
 export const fetchAllBlogs = createAsyncThunk('blogs/fetchAllBlogs', async () => {
-  const response = await axios.get('http://localhost:8080/admin-blog/all');
+  const response = await axios.get('https://nouman-cart.onrender.com/admin-blog/all');
   return response.data;
 });
 
 // Async thunk to fetch a product by ID
 export const fetchSingleBlog = createAsyncThunk('blogs/fetchSingleBlog', async (blogId) => {
-  const response = await axios.get(`http://localhost:8080/admin-blog/${blogId}`);
+  const response = await axios.get(`https://nouman-cart.onrender.com/admin-blog/${blogId}`);
  console.log('response',response)
   return response.data;
 });
@@ -19,7 +19,7 @@ export const fetchSingleBlog = createAsyncThunk('blogs/fetchSingleBlog', async (
 
 
 export const addBlog = createAsyncThunk('blogs/addBlog', async (blogData) => {
-  const response = await axios.post('http://localhost:8080/admin-blog/add-blog', blogData);
+  const response = await axios.post('https://nouman-cart.onrender.com/admin-blog/add-blog', blogData);
   return response.data;
 });
 
@@ -27,7 +27,7 @@ export const addBlog = createAsyncThunk('blogs/addBlog', async (blogData) => {
 
 
 export const updateBlog = createAsyncThunk('blogs/updateBlog', async ({ blogId, formData }) => {
-  const response = await axios.put(`http://localhost:8080/admin-blog/update-blog/${blogId}`, formData);
+  const response = await axios.put(`https://nouman-cart.onrender.com/admin-blog/update-blog/${blogId}`, formData);
   return response.data;
 });
 
@@ -35,7 +35,7 @@ export const updateBlog = createAsyncThunk('blogs/updateBlog', async ({ blogId, 
 
 
 export const deleteBlog = createAsyncThunk('blogs/deleteBlog', async (blogId) => {
-  await axios.delete(`http://localhost:8080/admin-blog/del-blog/${blogId}`);
+  await axios.delete(`https://nouman-cart.onrender.com/admin-blog/del-blog/${blogId}`);
   return blogId;
 });
 
